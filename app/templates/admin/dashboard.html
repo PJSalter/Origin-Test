@@ -1,0 +1,20 @@
+<!-- extended it so that it extends to the path of admin_templates -->
+
+{% extends "admin/templates/admin_templates.html" %}
+<!--
+then plugging the gaps such as the title name inbetween -->
+{% block title %} experiment with dashboard {% endblock %}
+
+<!-- my HTML to plug the gaps with. -->
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3>admin Dashboard</h3>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

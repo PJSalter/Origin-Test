@@ -1,0 +1,70 @@
+{% extends "public/templates/base.html" %} {# data form title #} {% block title
+%} Document Form {%endblock %} {# main html form plugging data #} {% block main
+%}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Enter Allergy Alert</h1>
+
+      <form action="/insert-data" method="POST">
+        <div class="form-group">
+          <label for="business_name">name of product: </label>
+          <input name="business_name" class="form-control" type="text" />
+        </div>
+
+        <form action="/insert-data" method="POST">
+          {% if food_allergy == "egg" %}
+          <div class="form-group">
+            <label for=" food_allergy">name of Allergen: </label>
+            <input name=" food_allergy" class="form-control" type="text" />
+          </div>
+            {% else if food_allergy == "peanut" %}
+            <div class="form-group">
+              <label for=" food_allergy">name of Allergen: </label>
+              <input name=" food_allergy" class="form-control" type="text" />
+            </div>
+            {% else if food_allergy == "lead" %}
+            <div class="form-group">
+              <label for=" food_allergy">name of Allergen: </label>
+              <input name=" food_allergy" class="form-control" type="text" />
+            </div>
+            {% else %}
+            <div class="form-group">
+              <label for=" food_allergy">name of Allergen: </label>
+              <input name=" food_allergy" class="form-control" type="text" />
+            </div>
+            {% endif %}
+
+          <div class="form-group">
+          <label for="use_by_date">Use-by-date:</label>
+
+          <input
+            type="date"
+            class="form-control"
+            name="use_by_date"
+            value="2022-07-22"
+            min="2018-01-01"
+            max="2024-12-31"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="pack_size">Pack Sizes: </label>
+          <input name="pack_size" class="form-control" type="text" />
+        </div>
+
+        <div class="form-group">
+          <label for="batch_codes">Batch codes: </label>
+          <input name="batch_codes" class="form-control" type="text" />
+        </div>
+
+        <button type="submit" class="submit-button btn-primary">
+          Submit Infomation
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

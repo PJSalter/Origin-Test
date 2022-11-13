@@ -1,0 +1,30 @@
+{# extends the path of base #} {% extends "public/templates/base.html" %} {%
+block title %}Display Info{% endblock %} {% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Display Allergy Info of Product</h1>
+      <hr />
+
+      <div class="card">
+        <div class="card-body">
+          <h4>{{ business_name }}</h4>
+          <hr />
+          {% if business_product %}
+          <p><strong>{{ business_product["allergy"] }}</strong></p>
+          <p class="text-muted">{{ business_product["use_by_date"] }}</p>
+          <p><em>{{ business_product["pack_size"]}}</em></p>
+          <p><em>{{ business_product["batch_codes"] }}</em></p>
+          {% else %}
+          <p>
+            product description has not been identified, so no alert is needed.
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

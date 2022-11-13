@@ -1,0 +1,27 @@
+{% extends "public/templates/base.html" %} {% block title %}Document Form{%
+endblock %} {% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h4>Form template</h4>
+      <hr />
+
+      <h2>Different types of contaminations</h2>
+      <hr />
+      <ul>
+        {% for breach in types_contamination_recall %} {# special jinja2
+        variable called loop index #}
+        <li>{{ loop.index }}: {{ breach }}</li>
+        {% endfor %}
+      </ul>
+
+      <h2>Name of product</h2>
+      <hr />
+      {# I get the value of this right into the HTML #}
+      <p>{{ name_of_product }}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {# created blocks within the base template #}
+    <main>{% block main %}{% endblock %}</main>
+    <figure>
+      <img
+        class="image-style"
+        src="{{ url_for('static', filename='img/alert.png') }}"
+        alt="alert"
+      />
+      <figcaption class="alert">Alergy Alert</figcaption>
+    </figure>
+    <h1 style="color: blueviolet">Allergy Requirements</h1>
+    <ul style="color: blue">
+      Create a template document incorporating the Jinja tagging and logic that
+      you consider appropriate in order to convert the document into reusable
+      form
+      <li>
+        You should use the "Food Recall Alert (BASE DOCUMENT)" notice as the
+        base template to be amended
+      </li>
+      <li>
+        You should ensure that the template is set up so that any form of recall
+        notice, with any set of possible parameters, can be produced using the
+        Documentation tool (i.e. it will produce the correct output for an
+        allergy recall or contamination recall without the need for
+        modification).
+      </li>
+      <li>The reusable template should then be returned to us;</li>
+    </ul>
+  </body>
+</html>

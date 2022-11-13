@@ -1,0 +1,11 @@
+body {
+  background-color: #dff0e2;
+}
+
+.image-style {
+  width: 20%;
+  height: auto;
+}
+.alert {
+  color: crimson;
+}
